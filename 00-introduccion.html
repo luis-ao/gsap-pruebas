@@ -81,42 +81,42 @@
 
         // STAGGER
 
-         let tween = gsap.from('.circle', {
+         /* let tween = gsap.from('.circle', {
              duration: .3,
              y: -400, //'random(-500,500)',
              x: 500,
              scale: 0,
-             stagger: 0.5,
+             stagger: 0.5, // cada elemento se va anima .5 sg después del otro 
              delay: 1 // sirve para agragar un retraso a la animación 
-         });
+         }); */
 
         // CONTROLS
 
-         document.querySelector('.play').onclick = () => tween.play();
+         /* document.querySelector('.play').onclick = () => tween.play();
          document.querySelector('.pause').onclick = () => tween.pause();
          document.querySelector('.reverse').onclick = () => tween.reverse();
-         document.querySelector('.slow').onclick = () => tween.timeScale(.2);
+         document.querySelector('.slow').onclick = () => tween.timeScale(.2); */
 
         // TIMELINE 
 
         // repeat es las veces que repite
         // yoyo es para repetir en reversa la animación
 
-         /* let tl = gsap.timeline({ repeat: 1, yoyo: true });
+        let tl = gsap.timeline({ repeat: 1, yoyo: true });
          tl.from('#logo', {
              duration: 2,
              rotate: 360
-         }); */
+         }); 
 
         // LABEL 
 
-         /* tl.addLabel('label1', "+=1");
+        /* tl.addLabel('label1', "+=1"); */
 
          tl.from('.circle', {
              duration: .2,
              scale: 0,
              stagger: .5
-         }, '+=1'); */ // el spacio entre una animación y otro
+         }, '+=1');  // el spacio entre una animación y otro
 
         // REPEAT (-1 infinite | yoyo)
 
